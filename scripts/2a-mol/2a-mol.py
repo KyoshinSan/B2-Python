@@ -5,13 +5,15 @@
 # Date : 23/10/2018
 # Auteur : Jonathan DINH
 
-#IMPORTS
+##### IMPORTS #####
+
 import random
 import time
 import sys
 import signal
 
-#VARIABLES
+##### VARIABLES #####
+
 nombreAleatoire = random.randint(0,100)
 welcomeMsg = "Bienvenue au jeu du plus ou moins ! Trouvez un nombre compris entre 0 et 100. Vous devez ecrire dans fichier un nombre !"
 moreMsg = "C'est plus grand !"
@@ -19,7 +21,8 @@ lessMsg = "C'est plus petit !"
 erreurMsg = "Veuillez ecrire un nombre entre 0 et 100 !"
 victoryMsg = 'Bravo, tu as gagne. La solution etait ' + str(nombreAleatoire)
 
-#FONCTIONS
+##### FONCTIONS #####
+
 def youcant(sig, frame):
 	goodbye()
 	sys.exit(0)
@@ -49,16 +52,13 @@ def EcrireVictoire():
 	fichier.write(victoryMsg)
 	fichier.close()
 
-def EcrireErreur():
-	fichier = open("nombre.txt", "w")
-	fichier.write(erreurMsg)
-	fichier.close()
-
 def goodbye():
 	print('\nLa solution etait ' + str(nombreAleatoire))
 	print('***Goodbye !***')
 
-#SCRIPT
+
+##### SCRIPT ######
+
 signal.signal(signal.SIGINT, youcant)
 signal.signal(signal.SIGTERM, youcant)
 EcrireMsgBienvenue()
