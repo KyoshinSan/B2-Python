@@ -5,27 +5,30 @@
 # Date : 23/10/2018
 # Auteur : Jonathan DINH
 
+##### IMPORTS #####
+
 from random import randint
 import sys
 import signal
+
+##### VARIABLES #####
+
+nombreAleatoire = randint(0,100)
+
+##### FUNCTIONS #####
 
 def youcant(sig, frame):
 	goodbye()
 	sys.exit(0)
 
-signal.signal(signal.SIGINT, youcant)
-signal.signal(signal.SIGTERM, youcant)
-
-nombreAleatoire = randint(0,100)
-
-def checkIsNumber():	#fonction qui test si l'input est une note
+def checkIsNumber():
 	while True:
 		try:
 			saisie = input('Saisir un nombre, taper \'q\' pour quitter : ')
 			if saisie == 'q':
 				break
 			saisie = int(saisie)
-			if saisie > 100 or saisie < 0:       #condition qui vérifie si la saisie est entre 0 et 100
+			if saisie > 100 or saisie < 0:
 				print('Erreur ce nombre n\'est pas compris entre 0 et 100')
 			else:
 				break
@@ -36,6 +39,10 @@ def checkIsNumber():	#fonction qui test si l'input est une note
 def goodbye():
 	print('\nLa solution était ' + str(nombreAleatoire))
 	print('***Goodbye !***')
+
+##### SCRIPT #####
+
+signal.signal(signal.SIGINT, youcant)
 
 while True:
 	nombreUser = checkIsNumber()
