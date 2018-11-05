@@ -5,9 +5,13 @@
 # Date : 15/10/2018
 # Auteur : Theo HERNANDEZ et Jonathan DINH
 
+##### VARIABLES #####
+
 liste = [] 	#on déclare notre liste
 
-while 0 < 1: 	#on boucle notre inpupt
+##### SCRIPT #####
+
+while True: 	#on boucle notre inpupt
 	prenom = input('Saisir un prenom, taper \'q\' pour quitter : ')
 	if prenom == 'q': 	#si l'input est q alors on quitte la boucle
 		break

@@ -3,23 +3,33 @@
 # Nom : 1a-add.py
 # Decription : Additionne 2 chiffre
 # Date : 15/10/2018
-# Auteur : Jonathan DINH et Theo HERNANDEZ
+# Auteur : Jonathan DINH
 
-def addition(): #fonction addition
-	while 0 < 1: #on boucle 
-		try: #on test si input et un nombre si c'est vrai on casse la boucle
+##### FONCTION #####
+
+def addition():
+	while True:
+		try:
 			int1 = int(input('Nombre 1 ? : '))
 			break
-		except ValueError: #sinon on affiche une erreur
+		except ValueError:
 			print("Erreur")
+		""" On test notre input avec un try,
+		si le nombre est entier on casse la boucle,
+		sinon cela affiche erreur et on doit retaper un nombre.
+		"""
 	
-	while 0 < 1: #la même chose pour le 2eme nombre
+#la même chose pour le 2eme nombre
+
+	while True:
 		try:
 			int2 = int(input('Nombre 2 ? : '))
 			break
 		except ValueError:
 			print("Erreur")
 	
-	return int1 + int2 #on addition les 2 nombres
+	return int1 + int2
 
-print('Le résultat est : ' + str(addition())) #affiche le résultat
+##### SCRIPT #####
+
+print('Le résultat est : ' + str(addition()))
