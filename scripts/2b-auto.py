@@ -10,7 +10,6 @@
 import random
 import sys
 import signal
-import re
 import time
 
 ##### VARIABLES #####
@@ -47,6 +46,9 @@ def goodbye():
 ##### SCRIPT #####
 
 signal.signal(signal.SIGINT, youcant)
+if lireFichier() != welcomeMsg:
+	print("***** Le script doit etre lancee au meme endroit ou on lance 2a-mol.py *****")
+	sys.exit(0)
 ecrireFichier(saisieBot)
 time.sleep(1)
 while True:
