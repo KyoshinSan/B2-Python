@@ -61,7 +61,7 @@ if os.access('/root', os.R_OK and os.W_OK):
 			sys.stdout.write(msgSaved)
 	else:
 		shutil.move(path_my_backup, path_data)
-		sys.stout.write(msgSaved)
+		sys.stdout.write(msgSaved)
 
 else:
 	sys.stderr.write(msgErrorPerm)
