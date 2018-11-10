@@ -18,7 +18,6 @@ nombreAleatoire = random.randint(0,100)
 welcomeMsg = "Bienvenue au jeu du plus ou moins ! Trouvez un nombre compris entre 0 et 100. Vous devez ecrire dans fichier un nombre !"
 moreMsg = "C'est plus grand !"
 lessMsg = "C'est plus petit !"
-erreurMsg = "Veuillez ecrire un nombre entre 0 et 100 !"
 victoryMsg = 'Bravo, tu as gagne. La solution etait ' + str(nombreAleatoire)
 
 ##### FONCTIONS #####
@@ -28,27 +27,27 @@ def youcant(sig, frame):
 	sys.exit(0)
 
 def EcrireMsgBienvenue():
-	fichier = open("nombre.txt", "w")
+	fichier = open("./nombre.txt", "w")
 	fichier.write(welcomeMsg)
 	fichier.close()
 
 def lectureNombre():
-	fichier = open("nombre.txt", "r")
+	fichier = open("./nombre.txt", "r")
 	return fichier.read()
 	fichier.close()
 
 def EcrirePlusPetit():
-	fichier = open("nombre.txt", "w")
+	fichier = open("./nombre.txt", "w")
 	fichier.write(lessMsg)
 	fichier.close()
 
 def EcrirePlusGrand():
-	fichier = open("nombre.txt", "w")
+	fichier = open("./nombre.txt", "w")
 	fichier.write(moreMsg)
 	fichier.close()
 
 def EcrireVictoire():
-	fichier = open("nombre.txt", "w")
+	fichier = open("./nombre.txt", "w")
 	fichier.write(victoryMsg)
 	fichier.close()
 
