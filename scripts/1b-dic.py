@@ -1,20 +1,21 @@
-#!/bin/python36
+#!/usr/bin/python36
+# -*- coding: utf-8 -*-
 
 # Nom : 1b-dic.py
 # Description : liste de prenom trier par ordre alphabetique
 # Date : 15/10/2018
-# Auteur : Theo HERNANDEZ et Jonathan DINH
+# Auteur : Jonathan DINH
 
 ##### VARIABLES #####
 
-liste = [] 	#on déclare notre liste
+liste = []
 
 ##### SCRIPT #####
 
-while True: 	#on boucle notre inpupt
-	prenom = input('Saisir un prenom, taper \'q\' pour quitter : ')
-	if prenom == 'q': 	#si l'input est q alors on quitte la boucle
-		break
-	liste.append(prenom) 	#sinon on ajoute à la liste
+while True:
+    prenom = input('Saisir un prenom, taper \'q\' pour quitter : ')
+    if prenom == 'q':
+        break
+    liste.append(prenom)
 
-print(sorted(liste)) 	#on affiche la liste trier avec la fonction sorted
+print(sorted(liste))
